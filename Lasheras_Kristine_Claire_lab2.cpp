@@ -82,24 +82,37 @@ string insertAfter(string after, string data, Node *head){
 
 int main(){
     Node *head = createNode("My Valentine by McBride");
+    traverse(head);
     
-    head = insertAtEnd("Lover by Taylor Swift", head);
-    head = insertAtEnd("Strawberries&cigarettes by TYrone Sivan", head);
-    head = insertAtEnd("The Only Exception by Paramore", head);
-    head = insertAtEnd("Heather by Conan Gray", head);
+    head = insertAtEnd("Lover by Tylor Swift", head);
+    traverse(head);
+    head = insertAtEnd("Strawberries&cigarettes by Tyrone Sivan", head);
+    traverse(head);
+    head = insertAtEnd("The Only Exeption by Paramore", head);
+    traverse(head);
     
-    head = insertAtBeginning("You'll Be Safe Here by Rico Blanco", head);
-    head = insertAtBeginning("The Man Who Can't Be Moved by The Script", head);
-    head = insertAtBeginning("Die With A Smile by Bruno Mars,Lady Gaga", head);
     head = insertAtBeginning("Dream by LISA", head);
     traverse(head);
-    
-    insertAfter ("Pano by Zack Tabudlo", "Dream by LISA", head);
-    insertAfter ("Imahe by Magnus Heaven", "The Man Who Can't Be Moved by The Script", head);
-    insertAfter ("Kathang Isip by Ben&Ben", "Die With A Smile by Bruno Mars,Lady Gaga", head);
+    head = insertAtBeginning("The Man Who Can't Be Moved by The Script", head);
+    traverse(head);
+    head = insertAtBeginning("Crybaby by SZA", head);
+    traverse(head);
+    head = insertAtBeginning("Iris by Goo Goo Dolls", head);
     traverse(head);
     
+    insertAfter ("Strawberries&cigarettes by Tyrone Sivan", "Love Hangover by JENNIE & Dominic Fike", head);
+    traverse(head);
+    insertAfter ("The Only Exeption by Paramore", "Die With A Smile by Lady Gaga & Bruno Mars", head);
+    traverse(head);
+    insertAfter ("The Man Who Can't Be Moved by The Script", "Bawat Daan by Ebe Dancel" , head);
+    traverse(head);
     
+    cout << deleteAtEnd(head);
+    traverse(head);
+    head = deleteFromBeginning(head);
+    traverse(head);
+    head = deleteFromGivenNode("Bawat Daan by Ebe Dancel",head);
+    traverse(head);
 
     return 0;
 }
